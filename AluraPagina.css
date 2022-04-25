@@ -1,0 +1,145 @@
+body{
+    display: inline;
+    width: 1440px;
+    height: 1024px;
+    background: #F3F5FC;
+}
+main{
+    display: block;
+    width: 1440px;
+    height: 950px;
+    background: #F3F5FC;
+}
+h1{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+#input{
+    display: inline-block;
+    position: relative;
+    left: 190px;
+    top: 168px;
+}
+textarea {
+    resize: none;
+    color: #0A3871;
+    outline: 0 none;
+    overflow-y: hidden;
+}
+.texto{
+    width: 500px;
+    position: absolute;
+    background: #F3F5FC;
+    border: #F3F5FC;
+    font-size: 32px;
+}
+#botones{
+    display: inline-block;
+    position: absolute; 
+    top: 741px;
+    left: 300px
+}
+h2{
+    position: relative;
+    font-size: 14px;
+    font-weight: 100;
+    bottom: 14px;
+    left: 15px;
+}
+h2 img{
+    position: relative;
+    top: 3px;
+    left: -9px;
+}
+button{
+    position: relative;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    margin: 0 10px 0 0;
+    padding: 24px;
+}
+#botonEncriptar{
+    color: #D8DFE8;
+    font-weight: 400;
+    font-size: 16px;
+    border-color: #0A3871;
+    background-color: #0A3871
+}
+#botonEncriptar:hover{
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871;
+}
+#botonDesencriptar{
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871;
+    font-weight: 400;
+    font-size: 16px;
+}
+#botonDesencriptar:hover{
+    color: #FFFFFF;
+    border-color: #0A3871;
+    background-color: #0A3871
+}
+.conjunto{
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    width: 360px;
+    height: 820px;
+    text-align: center;
+    border: 1px #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+#texto-devuelto{
+    position: absolute;
+    text-align: center;
+    padding: 32px;
+    font-size: 24px;
+    color: #495057;
+}
+#copiar{
+    position: relative;
+    top: 700px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871;
+    font-weight: 400;
+    font-size: 16px;
+}
+#borrar{
+    position: relative;
+    top: 200px
+}
+#mensaje{
+    position: static;
+    color: #343A40;
+    line-height: 120%;
+    font-size: 24px;
+    font-weight: 700;
+}
+#encriptar{
+    position: static;
+    margin-top: 10px;
+    line-height: 150%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #495057;
+}
+footer{
+    text-align: center;
+    height: 130px;
+    background: #0A3871;
+    color: #FFFFFF;
+}
+.piePagina{
+    padding: 65px 0px 0px 0px;
+}
