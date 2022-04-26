@@ -17,7 +17,7 @@
             <h1><img src="Logo.png"></h1>
 
             <div id="input">
-                <textarea class="texto" cols="10" rows="10"></textarea>
+                <textarea class="texto" cols="10" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             </div>
 
             <div id="botones">
@@ -55,13 +55,8 @@
         var botonDesencriptador = document.querySelector("button");
         var textodevuelto = document.getElementById("texto-devuelto");
         document.getElementById("copiar").style.display = "none";
-        textarea.value = "Ingrese el texto aquí";
         textodevuelto.textContent = "";
         document.getElementById("copiar").style.display = "none";
-
-        function borrarTextarea(){
-            textarea.value = "";
-        }
         
         function copiarAlPortapapeles(id_elemento) {
             var auxiliar = document.createElement("input");
@@ -137,8 +132,6 @@
             textodevuelto.textContent = decodificar(str);
             textarea.value = "";
 	    }
-        
-        textarea.onclick = borrarTextarea;
         
     </script>
 </html>
