@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="AluraPagina.css">
+        <link rel="stylesheet" href="reset.css">
+
+    </head>
+    <body>
+
+        <main>
+
+            <h1><img src="Logo.png"></h1>
+
+            <div id="input">
+                <textarea class="texto" cols="10" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+
+            <div id="botones">
+                <h2><img src="bi_exclamation-circle-fill.png">Solo letras minúsculas y sin acentos</h2>
+                
+                <button onclick = verificar(); id="botonEncriptar">Encriptar</button>
+                <button onclick = verificarDos(); id="botonDesencriptar"> Desencriptar</button>
+
+            </div>
+
+            <div class="conjunto">
+                <p id="texto-devuelto"></p>
+                <button onclick ="copiarAlPortapapeles('texto-devuelto')"; id="copiar">Copiar</button>
+
+                <div id="borrar">
+                    <img class="muñeco" src="Muñeco.png">
+                    
+                    <p id="mensaje">Ningún mensaje fue encontrado</p>
+                    <p id="encriptar">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+
+            <p class="piePagina">Bienvenidos, soy Nazareno Stufano y desarrollé esta pagina con las condiciones propuestas dentro del challenge de Alura Latam. Un saludo.</p>
+
+        </footer>
+
+    </body>
+    <script>
+        var textarea = document.querySelector("textarea");
+        var botonEncriptador = document.querySelector("button");
+        var botonDesencriptador = document.querySelector("button");
+        var textodevuelto = document.getElementById("texto-devuelto");
+        document.getElementById("copiar").style.display = "none";
+        textodevuelto.textContent = "";
+        document.getElementById("copiar").style.display = "none";
+        
+        function copiarAlPortapapeles(id_elemento) {
+            var auxiliar = document.createElement("input");
+            auxiliar.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+            document.body.appendChild(auxiliar);
+            auxiliar.select();
+            document.execCommand("copy");
+            document.body.removeChild(auxiliar);
+            textodevuelto.textContent = "";
+        }
+
+        function decodificar(frase){ 
+            var fraseDescodificada = "";
+            var i = 0; 
+            while(i < frase.length){
+                if(frase[i] == "a" || frase[i] == "á"){
+                    fraseDescodificada = fraseDescodificada + "a";
+                    i = i + 2;
+                } else if(frase[i] == "e" || frase[i] == "é"){
+                    fraseDescodificada = fraseDescodificada + "e";
+                    i = i + 5; 
+                } else if(frase[i] == "i" || frase[i] == "í"){
+                    fraseDescodificada = fraseDescodificada + "i";
+                    i = i + 4;
+                } else if(frase[i] == "o" || frase[i] == "ó"){
+                    fraseDescodificada = fraseDescodificada + "o";
+                    i = i + 4;
+                } else if(frase[i] == "u" || frase[i] == "ú"){
+                    fraseDescodificada = fraseDescodificada + "u";
+                    i = i + 4;
+                } else {
+                    fraseDescodificada += frase[i];
+                    i++
+                }
+            }
+            return fraseDescodificada;
+        }        
+
+        function codificar(frase){
+            var fraseCodificada = "";
+            for(var i = 0; i < frase.length; i++){
+                if(frase[i] == "a" || frase[i] == "á"){
+                    fraseCodificada = fraseCodificada + "ai";
+                } else if(frase[i] == "e" || frase[i] == "é"){
+                    fraseCodificada = fraseCodificada + "enter"
+                } else if(frase[i] == "i" || frase[i] == "í"){
+                    fraseCodificada = fraseCodificada + "imes"
+                } else if(frase[i] == "o" || frase[i] == "ó"){
+                    fraseCodificada = fraseCodificada + "ober"
+                } else if(frase[i] == "u" || frase[i] == "ú"){
+                    fraseCodificada = fraseCodificada + "ufat"
+                } else {
+                    fraseCodificada += frase[i];
+                }
+            }
+            return fraseCodificada;
+        }
+
+        function verificar(){
+            var str = textarea.value.toLowerCase();
+            codificar(toString(str));
+            document.getElementById("borrar").style.display = "none";
+            document.getElementById("copiar").style.display = "inline";
+            textodevuelto.textContent = codificar(str);
+            textarea.value = "";
+	    }
+
+        function verificarDos(){
+            var str = textarea.value.toLowerCase();
+            decodificar(toString(str));
+            document.getElementById("borrar").style.display = "none";
+            document.getElementById("copiar").style.display = "inline";
+            textodevuelto.textContent = decodificar(str);
+            textarea.value = "";
+	    }
+        
+    </script>
+</html>
