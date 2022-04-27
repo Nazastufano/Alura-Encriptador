@@ -62,18 +62,21 @@ button{
     border-radius: 24px;
     margin: 0 10px 0 0;
     padding: 24px;
+    transition: 1s background;
+    cursor: pointer;
 }
 #botonEncriptar{
     color: #D8DFE8;
     font-weight: 400;
     font-size: 16px;
     border-color: #0A3871;
-    background-color: #0A3871
+    background-color: #0A3871;
 }
 #botonEncriptar:hover{
     background-color: #D8DFE8;
     color: #0A3871;
     border-color: #0A3871;
+
 }
 #botonDesencriptar{
     background-color: #D8DFE8;
