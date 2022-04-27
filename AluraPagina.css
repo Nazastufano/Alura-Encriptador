@@ -120,7 +120,7 @@ button{
 }
 #borrar{
     position: relative;
-    top: 200px
+    top: 200px;
 }
 #mensaje{
     position: static;
