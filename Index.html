@@ -6,22 +6,22 @@
 
         <meta charset="UTF-8">
         <title>Encriptador de Texto</title>
-        <link rel="stylesheet" href="AluraPagina.css">
         <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="AluraPagina.css">
 
     </head>
     <body>
 
         <main>
 
-            <h1><img src="Logo.png"></h1>
+            <h1><img src="Logo.png" alt="Logo de la pagina representado por una A"></h1>
 
             <div id="input">
                 <textarea class="texto" cols="10" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             </div>
 
             <div id="botones">
-                <h2><img src="bi_exclamation-circle-fill.png">Solo letras minúsculas y sin acentos</h2>
+                <h2><img src="bi_exclamation-circle-fill.png" alt="Simbolo de advertencia">Solo letras minúsculas y sin acentos</h2>
                 
                 <button onclick = verificar(); id="botonEncriptar">Encriptar</button>
                 <button onclick = verificarDos(); id="botonDesencriptar"> Desencriptar</button>
@@ -33,7 +33,7 @@
                 <button onclick ="copiarAlPortapapeles('texto-devuelto')"; id="copiar">Copiar</button>
 
                 <div id="borrar">
-                    <img class="muñeco" src="Muñeco.png">
+                    <img class="muñeco" src="Muñeco.png" alt="Muñeco observando un diamante">
                     
                     <p id="mensaje">Ningún mensaje fue encontrado</p>
                     <p id="encriptar">Ingresa el texto que desees encriptar o desencriptar.</p>
