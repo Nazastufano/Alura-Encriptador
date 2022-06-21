@@ -1,5 +1,6 @@
 var botonEncriptador = document.querySelector("button");
 var textarea = document.querySelector("textarea");
+textarea.focus();
 
 function codificar(frase){
     var fraseCodificada = "";
