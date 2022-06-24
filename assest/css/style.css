@@ -100,27 +100,32 @@ button{
     background-color: #FFFFFF;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgb(0 0 0 / 8%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 #texto-devuelto{
-    position: absolute;
+    position: relative;
     text-align: center;
     padding: 32px;
     font-size: 24px;
     color: #495057;
 }
 #copiar{
-    position: relative;
-    top: 700px;
     background-color: #D8DFE8;
     color: #0A3871;
     border-color: #0A3871;
     font-weight: 400;
     font-size: 16px;
 }
+
 #borrar{
-    position: relative;
-    top: 160px;
+    position: absolute;
+    width: 26%;
+    top: 250px;
 }
+
 #mensaje{
     position: static;
     color: #343A40;
@@ -147,25 +152,94 @@ footer{
 
 /* Responsive */
 
-@media (max-width:1200px){
-    .pantalla{
-        grid-auto-columns: 100%;
-        gap: 10px;
-        grid-template-rows: auto auto;
+@media screen and (max-width:1200px){
+    h1{
+        margin: 40px 0 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
+    .pantalla{
+        gap: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 10vw 0 0 0;
+        align-items: center;
+
+    }
+
+    #input{
+        display: flex;
+        padding: 0px 0px 3rem 0px;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100vw;
+    }
+
+    .texto{
+        width: 100vw;
+        height: 50vw;
+    }
+
+    #botones{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    h2{
+        padding: 0px 1rem;
+    }
+
+    button{
+        width: 100vw;
+        height: auto; 
+        margin: auto;
+        justify-content: center;
+    }
+
     textarea{
         width: 100%;
     }
 
     .conjunto{
-        margin: 0 0 10% 0;
-        grid-column: 1 / 1;
-        grid-row: 2 / 3;
         height: 100%;
-        width: 100%;
+        width: 100vw;
         align-items: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+        justify-content: space-between;
     }
-    .borrar{
+    
+    #texto-devuelto{
+        position: inherit;
+        text-align: center;
+        padding: 0.5rem 0 0 0;
+    }
+
+    #copiar{
+        margin: 0px;
+        top: auto;
+        width: 100vw;
+    }
+
+    #borrar{
+        position: relative;
+        top: 0px;
         width: 100%;
+    }
+
+    footer{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .piePagina{
+        padding: 65px 0px;
+        display: flex;
+        flex-direction: column;
     }
 }
