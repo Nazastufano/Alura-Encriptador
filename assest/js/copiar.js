@@ -8,6 +8,6 @@ function copiarAlPortapapeles(id_elemento) {
     textodevuelto.textContent = "";
 }
 
-var textodevuelto = document.getElementById("texto-devuelto");
-document.getElementById("copiar").style.display = "none";
+var textodevuelto = document.getElementById("muñeco__texto");
+document.getElementById("muñeco__copiar").style.display = "none";
 textodevuelto.textContent = "";

@@ -30,8 +30,8 @@ function decodificar(frase){
 function verificarDos(){
     var str = textarea.value.toLowerCase();
     decodificar(toString(str));
-    document.getElementById("borrar").style.display = "none";
-    document.getElementById("copiar").style.display = "inline";
+    document.querySelector(".muñeco__borrar").style.display = "none";
+    document.getElementById("muñeco__copiar").style.display = "inline";
     textodevuelto.textContent = decodificar(str);
     textarea.value = "";
 }

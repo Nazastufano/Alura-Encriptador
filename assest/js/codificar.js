@@ -25,8 +25,8 @@ function codificar(frase){
 function verificar(){
     var str = textarea.value.toLowerCase();
     codificar(toString(str));
-    document.getElementById("borrar").style.display = "none";
-    document.getElementById("copiar").style.display = "inline";
+    document.querySelector(".muñeco__borrar").style.display = "none";
+    document.getElementById("muñeco__copiar").style.display = "inline";
     textodevuelto.textContent = codificar(str);
     textarea.value = "";
 }
