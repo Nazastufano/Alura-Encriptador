@@ -1,265 +1,283 @@
-body{
+body {
     background: #F3F5FC;
-    font-family: 'Inter', sans-serif;
     display: flex;
+    font-family: 'Inter', sans-serif;
     flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
+    justify-content: space-between;
 }
 
-.img{
-    margin: 40px 0 0 40px;
+.principal__img {
+    grid-column: 1/3;
+    margin: 40px 0 0 0;
 }
 
-.principal{
+.principal {
+    display: grid;
+    /*grid-auto-columns: 60% auto;
+    gap: 10%;*/
+    justify-content: space-between;
     padding: 0 10%;
-    display: grid;
-    grid-auto-columns: 60% auto;
-    gap: 10%;
 }
 
-.principal__input{
-    padding: 10% 0 0 0;
+.principal__input {
     display: grid;
+    grid-column: 1 / 2;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: auto auto auto;
-    grid-column: 1 / 2;
+    padding: 10% 0 0 0;
 }
 
-.principal__input__textarea{
-    display: grid;
-    grid-column: 1 / 3;
+.input__textarea {
     background: #F3F5FC;
     border: #F3F5FC;
-    font-size: 32px;
-    resize: none;
     color: #0A3871;
+    display: grid;
+    font-size: 32px;
+    grid-column: 1 / 3;
+    resize: none;
     outline: 0 none;
     overflow-y: hidden;
 }
 
-.principal__input__botones{
+.input__botones {
     display: grid;
+    grid-row: 2 / 3;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-row: 2 / 3;
 }
 
-.principal__input__botones--h2{
+.input__botones--h2 {
     font-size: 14px;
     grid-column: 1 / 3;
     padding: 0 10px;
 }
-.principal__input__botones--h2 img{
+
+.input__botones--h2 img {
+    left: -9px;
     position: relative;
     top: 3px;
-    left: -9px;
 }
-.boton{
-    width: 328px;
-    height: 67px;
+
+.boton {
     border-radius: 24px;
+    cursor: pointer;
+    height: 67px;
     margin: 0 10px 0 0;
     padding: 24px;
     transition: 1s background;
-    cursor: pointer;
+    width: 328px;
 }
-#botonEncriptar{
+
+#botonEncriptar {
+    background-color: #0A3871;
+    border-color: #0A3871;
     color: #D8DFE8;
     font-weight: 400;
     font-size: 16px;
-    border-color: #0A3871;
-    background-color: #0A3871;
 }
-#botonEncriptar:hover{
-    background-color: #D8DFE8;
-    color: #0A3871;
-    border-color: #0A3871;
 
-}
-#botonDesencriptar{
+#botonEncriptar:hover {
     background-color: #D8DFE8;
+    border-color: #0A3871;
     color: #0A3871;
+}
+
+#botonDesencriptar {
+    background-color: #D8DFE8;
     border-color: #0A3871;
-    font-weight: 400;
+    color: #0A3871;
     font-size: 16px;
+    font-weight: 400;
 }
-#botonDesencriptar:hover{
-    color: #FFFFFF;
-    border-color: #0A3871;
+
+#botonDesencriptar:hover {
     background-color: #0A3871;
+    border-color: #0A3871;
+    color: #FFFFFF;
 }
-.muñeco{
-    margin: 0 0 10% 0;
-    grid-column: 2 / 3;
-    vertical-align: top;
-    height: 800px;
-    width: 360px;
-    text-align: center;
-    border: 1px #FFFFFF;
+
+.principal__muñeco {
+    align-items: center;
     background-color: #FFFFFF;
+    border: 1px #FFFFFF;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgb(0 0 0 / 8%);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    grid-column: 2 / 3;
+    height: 800px;
     justify-content: space-between;
+    margin: 0 0 10% 0;
+    text-align: center;
+    vertical-align: top;
+    width: 360px;
 }
-#muñeco__texto{
+
+#muñeco__texto {
+    color: #495057;
+    font-size: 24px;
+    padding: 32px;
     position: relative;
     text-align: center;
-    padding: 32px;
-    font-size: 24px;
-    color: #495057;
 }
-#muñeco__copiar{
+
+#muñeco__copiar {
     background-color: #D8DFE8;
-    color: #0A3871;
     border-color: #0A3871;
-    font-weight: 400;
+    color: #0A3871;
     font-size: 16px;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
-.muñeco__borrar{
+.muñeco__borrar {
     position: absolute;
-    width: 26%;
     top: 250px;
+    width: 26%;
 }
 
-.muñeco__borrar__mensaje{
-    position: static;
+.borrar__mensaje {
     color: #343A40;
-    line-height: 120%;
     font-size: 24px;
     font-weight: 700;
-}
-.muñeco__borrar__texto{
+    line-height: 120%;
     position: static;
-    margin-top: 10px;
-    line-height: 150%;
+}
+
+.borrar__texto {
+    color: #495057;
     font-size: 16px;
     font-weight: 400;
-    color: #495057;
+    margin-top: 10px;
+    line-height: 150%;
+    position: static;
 }
-footer{
-    text-align: center;
+
+footer {
     background: #0A3871;
     color: #FFFFFF;
+    text-align: center;
 }
-.piePagina{
+
+.piePagina {
     padding: 65px 0px 65px 0px;
 }
 
 /* Responsive */
 
-@media screen and (max-width:768px){
-    .img{
+@media screen and (max-width:768px) {
+    .principal__img {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         margin: 40px 0 0 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    .principal{
-        gap: auto;
-        display: flex;
-        flex-direction: column;
-        padding: 10vw 0 0 0;
-        align-items: center;
     }
 
-    .principal__input{
+    .principal {
+        align-items: center;
         display: flex;
-        padding: 3rem 0px;
+        flex-direction: column;
+        gap: auto;
+        padding: 10vw 0 0 0;
+    }
+
+    .principal__input {
+        display: flex;
         flex-direction: column;
         gap: 1rem;
+        padding: 3rem 0px;
         width: 100vw;
     }
 
-    .principal__input__textarea{
-        width: auto;
+    .input__textarea {
         height: 50vw;
+        width: auto;
     }
 
-    .principal__input__botones{
+    .input__botones {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
         gap: 0.5rem;
+        justify-content: flex-end;
     }
 
-    .principal__input__botones--h2{
+    .input__botones--h2 {
         padding: 0px 1rem;
     }
 
-    .boton{
-        width: 100vw;
-        height: auto; 
-        margin: auto;
+    .boton {
+        height: auto;
         justify-content: center;
+        margin: auto;
+        width: 100vw;
     }
 
-    .muñeco{
-        height: 100%;
-        width: 100vw;
+    .principal__muñeco {
         align-items: center;
         display: flex;
         flex-direction: column;
-        min-height: 200px;
+        height: 100%;
         justify-content: space-between;
-    }
-    
-    #muñeco__texto{
-        position: inherit;
-        text-align: center;
-        padding: 0.5rem 0 0 0;
+        min-height: 200px;
+        width: 100vw;
     }
 
-    #muñeco__copiar{
+    #muñeco__texto {
+        padding: 0.5rem 0 0 0;
+        position: inherit;
+        text-align: center;
+    }
+
+    #muñeco__copiar {
         margin: 0px;
         top: auto;
         width: 100vw;
     }
 
-    .muñeco__borrar{
+    .muñeco__borrar {
         position: relative;
         top: 0px;
         width: 100%;
     }
 
-    footer{
+    footer {
         display: flex;
-        width: 100vw;
         justify-content: center;
+        width: 100vw;
     }
 
-    .piePagina{
-        padding: 65px 0px;
+    .piePagina {
         display: flex;
         flex-direction: column;
+        padding: 65px 0px;
     }
 }
 
-@media screen and (max-width: 1200px){
-    .principal{
+@media screen and (max-width: 1200px) {
+    .principal {
+        gap: inherit;
         grid-auto-columns: 50% auto;
         justify-content: space-around;
         padding: 0 1rem 0 1rem;
-        gap: inherit;
     }
-    .principal__input{
+
+    .principal__input {
         grid-template-columns: 100%;
     }
-    .principal__input__botones {
+
+    .input__botones {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-    .muñeco__borrar{
+
+    .muñeco__borrar {
         width: auto;
     }
 
-    #botonEncriptar, #botonDesencriptar{
+    #botonEncriptar,
+    #botonDesencriptar {
         width: 100%;
     }
 }

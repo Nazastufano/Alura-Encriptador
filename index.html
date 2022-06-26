@@ -12,36 +12,31 @@
 </head>
 
 <body>
-    <main>
-        <h1 class="img"><img src="./assest/img/Logo.png" alt="Logo de la pagina representado por una A"></h1>
-        <section class="principal">
-            <div class="principal__input">
-                <textarea class="principal__input__textarea" cols="10" rows="10" placeholder="Ingrese el texto aquí" maxlength="200"></textarea>
+    <main class="principal">
+        <h1 class="principal__img"><img src="./assest/img/Logo.png" alt="Logo de la pagina representado por una A"></h1>
+        <section class="principal__input">
+            <textarea class="input__textarea" cols="10" rows="10" placeholder="Ingrese el texto aquí"
+                maxlength="200"></textarea>
 
-                <div class="principal__input__botones">
-                    <h2 class="principal__input__botones--h2"><img src="./assest/img/bi_exclamation-circle-fill.png" alt="Simbolo de advertencia">Solo letras
-                        minúsculas y sin acentos</h2>
-                    <button class="boton" onclick=verificar(); id="botonEncriptar">Encriptar</button>
-                    <button class="boton" onclick=verificarDos(); id="botonDesencriptar"> Desencriptar</button>
-                </div>
+            <div class="input__botones">
+                <h2 class="input__botones--h2"><img src="./assest/img/bi_exclamation-circle-fill.png"
+                        alt="Simbolo de advertencia">Solo letras
+                    minúsculas y sin acentos</h2>
+                <button class="boton" onclick=verificar(); id="botonEncriptar">Encriptar</button>
+                <button class="boton" onclick=verificarDos(); id="botonDesencriptar"> Desencriptar</button>
             </div>
-
-            <div class="muñeco">
-                <p id="muñeco__texto"></p>
-
-                <button class="boton" id="muñeco__copiar" onclick="copiarAlPortapapeles('muñeco__texto')"; style="display: none"> Copiar</button>
-
-                <div class="muñeco__borrar">
-                    <img src="./assest/img/Muñeco.png" alt="Muñeco observando un diamante">
-
-                    <p class="muñeco__borrar__mensaje">Ningún mensaje fue encontrado</p>
-
-                    <p class="muñeco__borrar__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
-                </div>
+        </section>
+        <section class="principal__muñeco">
+            <p id="muñeco__texto"></p>
+            <button class="boton" id="muñeco__copiar" onclick="copiarAlPortapapeles('muñeco__texto')" ;
+                style="display: none"> Copiar</button>
+            <div class="muñeco__borrar">
+                <img src="./assest/img/Muñeco.png" alt="Muñeco observando un diamante">
+                <p class="borrar__mensaje">Ningún mensaje fue encontrado</p>
+                <p class="borrar__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </section>
     </main>
-
     <footer>
         <p class="piePagina">Bienvenidos, soy Nazareno Stufano y desarrollé esta pagina con las condiciones propuestas
             dentro del challenge de Alura Latam. Un saludo.</p>
