@@ -6,20 +6,20 @@
     <meta charset="UTF-8">
     <title>Encriptador de Texto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assest/css/reset.css">
-    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main class="principal">
-        <h1 class="principal__img"><img src="./assest/img/Logo.png" alt="Logo de la pagina representado por una A"></h1>
+        <h1 class="principal__img"><img src="./assets/img/Logo.png" alt="Logo de la pagina representado por una A"></h1>
         <section class="principal__input">
             <textarea class="input__textarea" cols="10" rows="10" placeholder="Ingrese el texto aquí"
                 maxlength="200"></textarea>
 
             <div class="input__botones">
-                <h2 class="input__botones--h2"><img src="./assest/img/bi_exclamation-circle-fill.png"
+                <h2 class="input__botones--h2"><img src="./assets/img/bi_exclamation-circle-fill.png"
                         alt="Simbolo de advertencia">Solo letras
                     minúsculas y sin acentos</h2>
                 <button class="boton" onclick=verificar(); id="botonEncriptar">Encriptar</button>
@@ -31,20 +31,24 @@
             <button class="boton" id="muñeco__copiar" onclick="copiarAlPortapapeles('muñeco__texto')" ;
                 style="display: none"> Copiar</button>
             <div class="muñeco__borrar">
-                <img src="./assest/img/Muñeco.png" alt="Muñeco observando un diamante">
+                <img src="./assets/img/Muñeco.png" alt="Muñeco observando un diamante">
                 <p class="borrar__mensaje">Ningún mensaje fue encontrado</p>
                 <p class="borrar__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </section>
     </main>
-    <footer>
-        <p class="piePagina">Bienvenidos, soy Nazareno Stufano y desarrollé esta pagina con las condiciones propuestas
-            dentro del challenge de Alura Latam. Un saludo.</p>
+    <footer class="footer">
+        <div>
+            <a href="https://github.com/Nazastufano"><img src="./assets/img/bxl-github.png" alt="github"></a>
+            <a href="https://www.linkedin.com/in/nazareno-stufano/"><img src="./assets/img/bxl-linkedin-square.png" alt="linkedin"></a>
+        </div>
+        <p class="footer__p">Desarrollo por Nazareno Stufano</p>
+        <p>2022</p>
     </footer>
 </body>
 
-<script src="./assest/js/codificar.js"></script>
-<script src="./assest/js/decodificar.js"></script>
-<script src="./assest/js/copiar.js"></script>
+<script src="./assets/js/codificar.js"></script>
+<script src="./assets/js/decodificar.js"></script>
+<script src="./assets/js/copiar.js"></script>
 
 </html>
